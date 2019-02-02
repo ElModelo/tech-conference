@@ -47,4 +47,6 @@ function eventos_json(&$eventos){
 	return json_encode($eventos_json);
 }
 
+
+
 ?>

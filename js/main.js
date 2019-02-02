@@ -3,17 +3,20 @@
 
 	var regalo = document.getElementById('regalo');
 	document.addEventListener('DOMContentLoaded', function(){
-		var map = L.map('mapa').setView([18.467006, -1149.958534], 16);
 
-		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
+		if (window.location.href == 'http://localhost/tech-conference/index.php') {
+			var map = L.map('mapa').setView([18.467006, -1149.958534], 16);
 
-		L.marker([18.467006, -1149.958534]).addTo(map)
-		    .bindPopup('Tech-Conference.<br> Boletos disponibles.')
-		    .openPopup();
-		
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
 
+			L.marker([18.467006, -1149.958534]).addTo(map)
+			    .bindPopup('Tech-Conference.<br> Boletos disponibles.')
+			    .openPopup();
+			
+		}
+		if (window.location.href == 'http://localhost/tech-conference/registro.php') {
 		//Campos datos Usuarios
 		var nombre = document.getElementById('nombre');
 		var apellido = document.getElementById('apellido');
@@ -41,7 +44,7 @@
 
 		botonRegistro.disabled = true;
 
-
+		}
 		if (document.getElementById('calcular')){
 
 			calcular.addEventListener('click', calcularMontos);
@@ -246,10 +249,10 @@ $(function() {
 	}
 
 	
-
+	if (window.location.href == 'http://localhost/tech-conference/index.php'){
 	//Cuenta regresiva
 
-	$('.cuenta-regresiva').countdown('2018/12/10 9:00:00', function(event){
+	$('.cuenta-regresiva').countdown('2019/12/10 9:00:00', function(event){
 
 		$('#dias').html(event.strftime('%D'));
 		$('#horas').html(event.strftime('%H'));
@@ -259,7 +262,7 @@ $(function() {
 	// Colorbox
 	$('.invitado-info').colorbox({inline:true, width: "50%"});
 	$('.boton_newsletter').colorbox({inline:true, width: "50%"});
-
+	}
 
 
 
