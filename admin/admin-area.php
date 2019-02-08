@@ -1,5 +1,6 @@
 <?php
   include 'templates/header.php';
+  include 'funciones/funciones.php';
   include 'templates/barra.php';
   include 'templates/navegacion.php';
 
