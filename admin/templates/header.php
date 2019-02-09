@@ -17,6 +17,9 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="css/skins/_all-skins.min.css">
+  <!-- Sweetalert2 pop up message library  -->
+  <link rel="stylesheet" href="css/sweetalert2.min.css">
+
   <link rel="stylesheet" href="css/admin.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
